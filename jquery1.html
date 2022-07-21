@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script>
+        $(function(){
+            // $("#title").css("background-color", "#ff0").css("border", "2px solid #f00");
+
+            // id
+            // $("#title").css({"background-color":"#ff0"
+            //                 ,"color":"red" 
+            //                 ,"border":"2px solid #000"
+            //                 });
+
+            // class
+            // $(".title").css({"background-color":"#ff0"
+            //                 ,"color":"red" 
+            //                 ,"border":"2px solid #000"
+            //                 });
+            
+            // 직접선택자, 요소
+            // $("h3").css({"background-color":"#ff0"
+            //                 ,"color":"red" 
+            //                 ,"border":"2px solid #000"
+            //                 });
+                            
+            // 인접선택자
+            // $("#title, h1").css({"background-color":"#ff0"
+            //                     ,"color":"red" 
+            //                     ,"border":"2px solid #000"
+            //                     });
+
+            // 종속선택자
+            $("h2.title").css({"background-color":"#ff0"
+                            ,"color":"red" 
+                            ,"border":"2px solid #000"
+                            });
+        });
+    </script>
+</head>
+<body>
+    <h1>제이쿼리</h1>
+    <h2 id="title">id선택자</h2>
+    <h2 class="title">class선택자</h2>
+    <h3>직접선택자</h3>
+    <h3>인접선택자</h3>
+</body>
+</html>

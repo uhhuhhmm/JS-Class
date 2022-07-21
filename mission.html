@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        // p.129
+        // Q1.
+        // var phoneNum = "010-2345-1234";
+        // var result_1 = phoneNum.substring(0, 9);
+        // document.write(result_1, "**** <br>");
+
+        // var imgSrc = "images/bnt_out.jpg";
+        // var result_2 = imgSrc.replace("out", "over");
+        // document.write(result_2, "<br>");
+        // document.write("<hr>");
+        // Q2.
+        // var menu = ["짜장면", "돈가스", "된장국", "김치찌개", "회덮밥"];
+        // var menuNum = Math.floor(Math.random() * menu.length);
+        // var result = menu[menuNum];
+        // document.write(result);
+
+        // p.155
+        // Q.1
+        // function chColor() {
+        //     var arrColor = ["#ff0", "#6c0", "#fcf", "#cf0", "#39f"];
+        //     var arrNum = Math.floor(Math.random() * arrColor.length);
+        //     var bodyTag = document.getElementById("theBody");
+        //     bodyTag.style.backgroundColor = arrColor[arrNum];
+        // }
+
+        // Q.2
+        // function TestScore(name, kor, eng) {
+        //     this.userName = name;
+        //     this.korNum = kor;
+        //     this.engNum = eng;
+
+        //     TestScore.prototype.getTestInfo = function() {
+        //         document.write("이름: " + this.userName, "<br>");
+        //         document.write("국어: " + this.korNum, "<br>");
+        //         document.write("영어: " + this.engNum, "<br>");
+        //     }
+        //     TestScore.prototype.getAvg = function() {
+        //         return (this.korNum + this.engNum) / 2;
+        //     }
+        // }
+
+        // var kimgun = new TestScore("김군", 80, 90);
+        // var ohgun = new TestScore("오군", 100, 80);
+
+        // kimgun.getTestInfo();
+        // document.write("평균 점수: " + kimgun.getAvg(), "<br><br>");
+
+        // ohgun.getTestInfo();
+        // document.write("평균 점수: " + ohgun.getAvg(), "<br>");
+
+        // p.243
+        // Q.1
+        // $(function () {
+        //     $("#myList li").not(":first")
+        //         .css({ "background-color": "#ff0" });
+        // });
+
+        // Q.2
+        $(function () {
+            $("#myList li:eq(2)")
+                .css({ "background-color": "#ff0" });
+        });
+    </script>
+
+    <style>
+    </style>
+</head>
+
+<body>
+    <!-- p.155 Q.1 -->
+    <!-- <body id="theBody">
+    <button onclick="chColor();">배경 색상 바꾸기</button> -->
+
+    <!-- p.243  -->
+    <!-- Q.1 -->
+    <!-- <ul id="myList">
+    <li>내용1</li>
+    <li>내용2</li>
+    <li>내용3</li>
+    <li>내용4</li>
+</ul> -->
+    <!-- Q.2 -->
+    <ul id="myList">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+    </ul>
+</body>
+
+</html>

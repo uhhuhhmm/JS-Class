@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // let arr1 = [];  // let arr1 = {} <- 객체 생성 방법
+        // arr1[0] = 1;
+        // arr1[1] = 'hello';
+        // arr1[2] = 3;
+
+        // let arr2 = [1, 2, 3];
+
+        // let arr3 = new Array();
+        // arr3[0] = 1;
+        // arr3[1] = 2;
+        // arr3[2] = 3;
+
+        // //값을 직접 넣기
+        // let arr4 = new Array(1, 2, 4);
+        // let arr5 = new Array(5);
+
+        // //값을 넣지 않았지만3인 배열   
+        // let arr6 = [,,,];
+        // arr6[0] = 1;
+        // arr6[1] = 2;
+        // arr6[2] = 3;
+
+        // for (let i = 0; i<arr6.length; i++) {
+        //     document.write(arr6[i], '<br>');
+        // }
+
+        // for (let arr of arr6) {
+        //     document.write(arr, '<br>')
+        // }
+
+        // arr6.forEach(function (arr, index, array){
+        //     document.write(arr,'&nbsp;', index, '&nbsp;', array, '<br>')
+        // });
+
+        // lastindexof() //위치값(index) 확인
+        // includes() //값의 포함 유무 -> true, false
+
+        // p.102
+        // var arr_1 = ["사당","교대","방배","강남"];
+        // var arr_2 = ["신사","압구정","옥수"];
+
+        // var result = arr_1.join("-");
+        // console.log(result);
+
+        // result = arr_1.concat(arr_2);
+        // console.log(result);
+
+        // result = arr_1.slice(1, 3);
+        // console.log(result);
+
+        // arr_1.sort();
+        // console.log(arr_1);
+
+        // arr_2.reverse();
+        // console.log(arr_2);
+
+        // // p.103
+        // var greenArr = ["교대","방배","강남"];
+        // var yellowArr = ["미금","정자","수서"];
+
+        // greenArr.splice(2, 1, "서초", "역삼");
+        // console.log(greenArr);
+
+        // var data1 = yellowArr.pop(); //수서
+        // var data2 = yellowArr.shift(); //미금
+
+        // yellowArr.push(data2); //미금
+        // console.log(yellowArr);
+
+        // yellowArr.unshift(data1); //수서
+        // console.log(yellowArr);
+
+        // let str = new String("abc");
+        // let str2 = "abc";
+
+        // str.length
+        // str2.length
+
+        // "abc".length
+        // p.106
+        // t.charAt(16) = g
+        // indexOf("you") = 12 왼쪽에서부터 첫 'you' 나오는 index
+        // indexOf("you", 16) = 29
+        // lastIndexOf("you") = 29
+        // lastIndexOf("you") = 12
+        // match("luck") = 
+        // search("you") = 12
+        // substr(21, 4) = luck
+        // substring(6, 12) = thank
+        // replace("you", "me") = you를 me로 치환
+        // toLowerCase() = 소문자 변경
+        // toUpperCase() = 대문자 변경
+        // length() = 32 모든 문자 수
+
+        // p.109
+        // var userName = prompt("What is your English-Name?", "");
+
+        // var upperName = userName.toUpperCase();
+        // document.write(upperName, "<br>");
+
+        // var userNum = prompt("당신의 연락처는?", "");
+        // var result = userNum.substring(0, userNum.length -4) + "****";
+        // document.write(result, "<br>");
+
+        // p.110
+        var userEmail = prompt("당신의 이메일 주소는?", "");
+        var arrUrl = [".co.kr", ".com", ".net", ".or.kr", ".go.kr"];
+
+        var check1 = false;
+        var check2 = false;
+
+        if (userEmail.indexOf("@") > 0) {
+             check1 = true; 
+        }
+
+        for (var i = 0; i < arrUrl.length; i++) {
+            if (userEmail.indexOf(arrUrl[i]) > 0) {
+                check2 = true;
+            }
+        }
+
+        if (check1 && check2) {
+            document.write(userEmail);
+        } else {
+            alert("이메일 형식이 잘못되었습니다.");
+        }
+
+        
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

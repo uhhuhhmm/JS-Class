@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script>
+      $(function () {
+        $.getJSON("book.json", function (data) {
+          let books = data.book;
+
+          $(books).each(function (t, obj) {
+            let title = obj.title;
+            let author = obj.author;
+            let price = obj.price;
+            let txt =
+              "<il>" + title + ", " + author + ", " + price + "</li><hr>";
+            $("body").append(txt);
+          });
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

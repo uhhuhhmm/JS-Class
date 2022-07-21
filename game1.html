@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <title> 수학객체 </title>
+   <script>
+      document.write("<h1>컴퓨터 가위, 바위, 보 맞추기</h1>");
+
+      var game = prompt("가위, 바위, 보 중 선택하세요?", "가위");
+      var gameNum;
+      switch (game) {
+         case "가위": gameNum = 1;
+            break;
+         case "바위": gameNum = 2;
+            break;
+         case "보": gameNum = 3;
+            break;
+         default: alert("잘못 작성하셨습니다.");
+            location.reload();
+      }
+
+      var com = Math.ceil(Math.random() * 3);
+
+      document.write("<table>\
+                  <tr>\
+                     <td>\
+                        <h1>COM</h1>\
+                           </td>\
+                      <td>\
+                        <h1>USER</h1>\
+                           </td>\
+                  </tr>\
+                  <tr>\
+                     <td>\
+                        <img src=\"images/math_img_" + com + ".jpg\">\
+                           </td>\
+                      <td>\
+                        <img src=\"images/math_img_" + gameNum + ".jpg\">\
+                           </td>\
+                  </tr>\
+                  </table>"
+      );
+
+      let result;
+      result = com - gameNum;
+      if (result == 2 || result == -1)
+         document.write("<h1>USER WIN</h>");
+      else if (result == 0) {
+         document.write("<h1>무 승 부</h>");
+      }
+      else {
+         document.write("<h1>COM WIN</h>");
+      }
+
+      if (!(result == 2 || result == -1))
+         setTimeout(() => {
+            location.reload();
+         }, 1000);
+
+   </script>
+</head>
+
+<body>
+</body>
+
+</html>

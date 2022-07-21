@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>지도 생성하기</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <!-- 지도를 표시할 div 입니다 -->
+    <div id="map" style="width: 100%; height: 350px"></div>
+    <section>
+      <h1>테이블</h1>
+
+      <table border="1">
+        <tr>
+          <th>ID</th>
+          <th>약국명칭</th>
+          <th>약국소재지</th>
+          <th>약국전화번호</th>
+        </tr>
+      </table>
+    </section>
+
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5b1d37d4f5bc22913718a92953bc4ab4
+"
+    ></script>
+    <script>
+      var mapContainer = document.getElementById("map"), // 지도를 표시할 div
+        mapOption = {
+          center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+          level: 3, // 지도의 확대 레벨
+        };
+
+      let get_url =
+        "https://api.odcloud.kr/api/3077888/v1/uddi:444645a3-bc90-47fd-aa42-d717c93c464a_201705111713?page=1&perPage=10&serviceKey=94fLuj6ptLlmNfMCJQxmOD0gwCeSer8AOSrUCkxbNisXVAuUmT1MVSJ%2F%2Bd8XdyueHcOxZE8KEaX5pOu3ilWS6g%3D%3D";
+
+      $.getJSON(get_url, function (data) {
+        console.log(data);
+
+        for (let i = 0; i < data.currentCount; i++) {
+          let txt =
+            "<tr>" +
+            "<td>" +
+            data.data[i].번호 +
+            "</td>" +
+            "<td>" +
+            data.data[i].명칭 +
+            "</td>" +
+            "<td>" +
+            data.data[i].소재지 +
+            "</td>" +
+            "<td>" +
+            data.data[i].전화번호 +
+            "</td>" +
+            "</tr>";
+          $("table").append(txt);
+        }
+      });
+
+      // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+      var map = new kakao.maps.Map(mapContainer, mapOption);
+    </script>
+  </body>
+</html>

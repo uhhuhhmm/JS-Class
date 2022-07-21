@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.write("<h1>컴퓨터 가위, 바위, 보</h1>");
+
+        var game = prompt("가위, 바위 보 중 선택하세요?", "");
+        var gameNum;
+        switch (game) {
+            case "가위":
+                gameNum = 1; break;
+            case "바위":
+                gameNum = 2; break;
+            case "보":
+                gameNum = 3; break;
+            default: alert("잘못 작성했습니다.");
+                location.reload();
+        }
+
+        var com = Math.ceil(Math.random() * 3);
+        // document.write("<h1>COM</h1>");
+        document.write("<h2>COM</h2>"+"<img src =\"img/math_img_" + com + ".jpg\">");
+
+        // document.write("USER");
+        document.write("<h2>USER</h2>" + "<img src =\"img/math_img_" + gameNum + ".jpg\">");
+
+        // document.write("<img src=\"img/ㅊㅋ.jpg\">");
+        // document.write("<img src=\"img/ㄸ.jpg\">");
+
+        if (gameNum == com) {
+            alert("DRAW");
+            location.reload();
+        } else if (gameNum == 1 && com == 2){
+            alert("COM WIN Loose Try Again");
+            location.reload();
+        } else if (gameNum == 1 && com == 3) {
+            document.write("<h1>USER WIN</h1>")
+            document.write("<img src=\"img/ㅊㅋ.jpg\">");
+        } else if (gameNum == 2 && com == 1) {
+            document.write("<h1>USER WIN</h1>")
+            document.write("<img src=\"img/ㅊㅋ.jpg\">");
+        } else if (gameNum == 2 && com == 3) {
+            alert("COM WIN Loose Try Again");
+            location.reload();
+        } else if (gameNum == 3 && com == 1) {
+            alert("COM WIN Loose Try Again");
+            location.reload();
+        } else if (gameNum == 3 && com == 2) {
+            document.write("<h1>USER WIN</h1>");
+            document.write("<img src=\"img/ㅊㅋ.jpg\">");
+        }
+
+
+        //google
+        // let input = prompt('가위 바위 보:');
+
+        // function user() {
+
+        //     const scissors = (0);
+        //     const rock = (1);
+        //     const paper = (2);
+        //     if (input == '가위') {
+        //         input = scissors;
+        //     } else if (input == '바위') {
+        //         input = rock;
+        //     } else if (input == '보') {
+        //         input = paper;
+        //     };
+        // };
+
+        // function com() {
+        //     const rand = Math.floor(Math.random() * 3);
+        //     if (rand == input) {
+        //         alert('Draw');
+        //     } else if (rand == 0 && input == 1) {
+        //         alert('User Win');
+        //     } else if (rand == 0 && input == 2) {
+        //         alert('User Lose');
+        //     } else if (rand == 1 && input == 0) {
+        //         alert('Com Win');
+        //     } else if (rand == 1 && input == 2) {
+        //         alert('User Win');
+        //     } else if (rand == 2 && input == 0) {
+        //         alert('User Win');
+        //     } else if (rand == 2 && input == 1) {
+        //         alert('Com Win');
+        //     };
+        // };
+        // user();
+        // com();
+    </script>
+
+    <style>
+        h2 {
+            display: inline-block;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>

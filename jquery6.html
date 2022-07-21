@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(function () {
+            // first-of-type last
+            // $("li:first-of-type").css({'background-color':'#ff0'});
+            // $("li:last-of-type").css({'background-color':'#0ff'});
+
+            // ()숫자 의미 : 작성된 위치 순서
+            // $("#menu1 li:nth-child(1)").css({'background-color':'blue'});
+            // 작성된 위치의 2의 배수 위치
+            // $("#menu2 li:nth-child(2n)").css({'background-color':'red'});
+            // 마지막 위치에서부터 지정한 숫자 위치
+            // $("#menu2 li:nth-last-child(2)").css({'background-color':'yellow'});
+
+            // $("li:only-child").css({'background-color':'blue'});
+            // $("#menu1 li").slice(1, 3).css({'background-color':'grey'});
+
+            //let obj = {};
+            //key value : map구조
+            // let obj = [
+            //     {"area": "서울"}
+            //     ,{"area": "부산"}
+            //     ,{"area": "전주"}
+            // ]; 
+
+            // document.write(obj[0].area, "<br>");
+            // document.write(obj[1].area, "<br>");
+            // document.write(obj[2].area);
+
+            //반복문
+            // $(obj).each(function(i, o){
+            //     document.write(document.write(i + ":" + o.area));
+            //     console.log(i + ":", o);    
+            // });
+
+            let links = [
+                { name: 'Google', url: 'http://google.com' },
+                { name: 'Naver', url: 'http://www.naver.com' },
+                { name: 'Daum', url: 'http://www.daum.net' }
+            ];
+
+            let output = '';
+
+            $.each(links, function (index, item) {
+                output += '<a href="' + item.url + '">';
+                output += item.name + '</a><br>';
+
+                $('#div1').html(output);
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="div1"></div>
+
+    <!-- <h1>탐색 선택자</h1>
+    <ul id="menu1">
+        <li>내용1-1</li>
+        <li>내용1-2</li>
+        <li>내용1-3</li>
+        <li>내용1-4</li>
+    </ul>
+    <ul id="menu2">
+        <li>내용2-1</li>
+        <li>내용2-2</li>
+        <li>내용2-3</li>
+        <li>내용2-4</li> -->
+    </ul>
+</body>
+
+</html>

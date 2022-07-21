@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var box;
+        document.write(box);
+        document.write("<br>");
+        box = 100;
+        document.write(box);
+        document.write("<br>");
+        box = 200;
+        document.write(box);
+        
+        document.write("<br>");
+        box = "Hello World!!";
+        document.write(box, "<br>");
+
+        var box = 500;
+        document.write(box, "<br>");
+
+        //ES6버전
+
+        //var, let, const의 차이 - 변수 선언 및 할당
+        //var
+        //예전에는 자바스크립트의 변수 선언이 var로만 가능했었다.
+        //var로 변수 선언을 했을 때의 가장 큰 특징은 중복 선언이 가능하다.
+        //변수 선언문 이전에 변수를 참조하면 언제나 undefined를 반환한다.
+        var a = 100;
+        console.log(a);
+
+        var a = 200;
+        console.log(a);
+
+        //let
+        //변수명을 중복으로 선언하면 에러가 발생한다.
+        //하지만 값을 재할당 하는 것은 가능하다.
+
+        let b = 100;
+        console.log(b);
+
+        // let b = 200;
+        // console.log(b);
+
+        b = 'hello'
+        console.log(b);
+
+        //const
+        //변수명을 중복으로 선언하면 let과 같이 에러가 발생한다.
+        //let과 다른 점은 값을 재할당 하는 것도 불가능하다는 점이다.
+        //처음에 한 번 선언하고 나면 다른 값을 넣을 수 없기 때문에
+        //보통 const는 상수를 선언하는 키워드로 사용된다.
+        //const가 let과 다른 점이 있다면, 반드시 선언과 초기화를 동시에 진행되어야 한다.
+
+        const c = 100;
+        console.log(c);
+
+        c = 200;
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

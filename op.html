@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // let num1 = 100;
+        // let num2 = 200;
+
+        // let result;
+        // result = num1 + num2;
+
+        // document.write(result);
+
+        // let t1 = "학교종이 ";
+        // let t2 = "땡땡땡";
+        // let result;
+        // result = t1 + t2;
+        // document.write(result);
+
+        // let str = "<table border='1'>"
+        // str += "<tr>";
+        // str += "<td>1</td><td>2</td><td>3</td>";
+        // str += "</tr>";
+        // str += "</table>"
+
+        // document.write(str);
+
+        // let icon = "img/d2.png"
+        // let img = "<img src='" + icon + "'>";
+        // document.write(img);
+
+        // 논리연산자
+        // let a = 10;
+        // let b = 20;
+
+        // document.write(a > b);
+
+        // p.55
+        // let userHeight = 180;
+        // let userWeight = 74;
+
+        // let avg_w = (userHeight - 100) * 0.9;
+        // document.write(avg_w);
+
+        // prompt
+        // let userHeight = prompt("키몇?", ""); *문자로 반환*
+        // let userWeight = prompt("몸무몇?", "");
+        // let avg_w = (userHeight - 100) * 0.9;
+        // var result = userWeight >= avg_w - 5 && userWeight <= avg_w + 5;
+        // result = result ? "IN" : "OUT";
+        // document.write(result);
+        // 강사님꺼
+        // let h = prompt("당신의 키는", '');
+        // let w = prompt("당신의 몸무게는", '');
+        // let result = (h - 100) * 0.9;
+        // document.write("결과: 적정 체중은 " + result)
+
+
+        // p.58
+        // 1
+        // var pri1 = 3000;
+        // var pri2 = 3000;
+        // var pri3 = 3000;
+
+        // var total = pri1 + pri2 + pri3;
+        // var result = total < 10000 ? "굳잡" : total - 10000 + "원 넘었잖아 미쳤어?";
+        // document.write(result);
+
+        // *강사님꺼
+        // let price1 = 3000, price2 = 3000, price3 = 3000;
+        // let total, result;
+        // total = price1 + price2 + price3;
+        // result = total > 10000 ? total - 10000 + "원 초과" : "돈 관리 잘했다.";
+        // document.write(result);
+
+        // 2
+        // var q1 = 1200;
+        // var q2 = 1300;
+        // var q3 = 1000;
+        // var q4 = prompt("q4", "");
+
+        // var result = (q1 + q2 + q3) / 3;
+        // result = result <= q4 ? "오 잘 파네~" : "회사 말아먹게?";
+        // document.write(result);
+
+        // *강사님꺼
+        // let avg;
+        // let fourth, result;
+        // avg = (1200 + 1300 + 10000) / 3;
+        // fourth = prompt("4분기 판매량 입력", '');
+        // result = avg > fourth ? '4분기 판매량이 평균이하' : '4분기 판매량이 평균이상'
+        // document.write(result);
+
+        // *진성's 문제
+        // var price1 = Number(prompt("교통비?", ""));
+        // var price2 = Number(prompt("식비?", ""));
+        // var price3 = Number(prompt("음료비?", ""));
+        // var price4 = 10000;
+        // var sum = price1 + price2 + price3;
+        // var result = price4 - sum;
+        // result = result >= 0 ? "돈 관리 잘 했어요!" : result + "원 못했어";
+        // document.write(result);
+
+
+        // 조건문
+        // if(1) { //0 : false,  나머지 숫자는 true
+        //     document.write('hello');
+        // }
+
+        // 0, null, "", undefined
+        //문자열 자체는 true
+
+        // p.64
+        // var userName = prompt("방문자의 이름은?", "")
+        // if(userName) {
+        //     document.write(userName + "님 반갑습니다! 방문을 환영합니다.")
+        // }
+
+        // alert("뒤질래?"); - 버튼 (확인)
+        // confirm("뒤질래?"); - 버튼 (확인 : true, 취소 : false)
+
+        // let result = confirm("나랑 결혼해줄래?");
+        // if(result) {
+        //     document.write("어머 너무 좋아요")
+        // }else{
+        //     document.write("꺼져")
+        // }
+
+        // p.70
+        // var id = "TIS";
+        // var pw = "1";
+
+        // var user_id = prompt("ID", "")
+        // var user_pw = prompt("Password", "")
+
+        // if(id == user_id) {
+        //     if(pw == user_pw) {
+        //         document.write(user_id + " Welcome back!!!");
+        //     }else{
+        //         alert("Wrong Password!!! please check again");
+        //         location.reload();
+        //     }
+        // }else{
+        //     alert("ID is not correct")
+        //     location.reload();
+        // }
+
+        // p.76
+        // var i = 20;
+        // while(i >= 10) {
+        //     if(i % 2 == 0){
+        //         document.write("<p class='blue'>" + i + "</p>");
+        //     }else{
+        //         document.write("<p class='red'>" + i + "</p>");
+        //     }
+        //     i--;
+        // }
+
+        // p.79
+        // for(var i = 1; i <= 100; i++) {
+        //     if(i % 5 == 0 && i % 7 != 0) {
+        //         document.write("<p class='red'> "+ i +" </p>");
+        //     } else if (i % 7 == 0 && i % 5 != 0) {
+        //         document.write("<p class='green'> "+ i +" </p>");
+        //     } else if (i % 7 == 0 && i % 5 == 0) {
+        //         document.write("<p class='aqua'> "+ i +" </p>");
+        //     }
+        // }
+
+        // let str = "<table border='1'>"
+        // str += "<tr>";
+        // str += "<td>1</td><td>2</td><td>3</td>";
+        // str += "</tr>";
+        // str += "</table>"
+
+        // let tb = "<table border='1'>"
+        // tb += "<tr>";
+        // tb += "<td>1</td><td>2</td>";
+        // tb += "</tr>";
+        // tb += "</table>";
+
+        // document.write('<table border="1">');
+        // J-
+        // // header
+        // document.write('<thead>');
+        // document.write('<tr>');
+        // for (let i = 1; i <= 5; i++) {
+        //     document.write('<th>' + i + '단 </th>');
+        // }
+        // document.write('</tr>');
+        // document.write('</thead>');
+
+
+        // // body
+        // document.write('<tbody>');
+        // document.write('<tr>');
+        // for (var k = 0; k <= 5; k += 5) {
+        //     // document.write("<br>");
+            
+        //     for (var i = 1; i <= 9; i++) {
+
+        //         for (var j = 1; j <= 5; j++) {
+        //             var result = i * (j + k);
+        //             document.write('<td>' + (j + k) + " * " + i + " = " + result + " " + '</td>');
+        //         }
+        //         // document.write("<br>");
+        //         document.write('</tr>');
+        //     }
+        // }
+        // document.write('</tbody>');
+        // document.write('</table>');
+        // document.write('<br>');
+
+
+
+
+        // google
+        // document.write('<table border="1">');
+
+        // // header
+        // document.write('<thead>');
+        // document.write('<tr>');
+        // for (let i = 1; i <= 10; i++) {
+        //     document.write('<th>' + i + '단 </th>');
+        // }
+        // document.write('</tr>');
+        // document.write('</thead>');
+
+        // body
+        // document.write('<tbody>');
+        // for (let i = 1; i <= 9; i++) {
+        //     document.write('<tr>');
+        //     for (let j = 1; j <= 10; j++) {
+        //         document.write('<td>' + j + ' * ' + i + ' = ' + (j * i) + '</td>');
+
+        //     }
+        //     document.write('</tr>');
+        // }
+        // document.write('</tbody>');
+
+        // document.write('</table>');
+
+
+
+        //강사님꺼
+        let result;
+        document.write("<table border = '1'>");
+        for(let i = 1; i <= 10; i += 5) {
+            document.write("<tr><th>" + i + "</th><th>" + (i+1) + "</th><th>" + (i+2) + "</th><th>" + (i+3) + "</th><th>" + (i+4) + "</th></tr>");
+            for(let j = 1; j <= 9; j++) {
+                document.write("<tr>");
+                for(let k=i; k < i+5; k++){
+                    document.write("<td>");
+                    document.write(k + "*" + j + "=" + k * j);
+                    document.write("</td>");
+                }
+                document.write("</tr>");
+                // document.write("<br>");
+            }
+            // document.write("<br>");
+        }
+        document.write("</table>");
+
+
+
+        //건우꺼
+        // for (var k = 0; k <= 5; k += 5) {
+        //     document.write("<br>")
+        //     for (var i = 1; i <= 9; i++) {
+        //         document.write("<br>")
+        //         for (var j = 1; j <= 5; j++) {
+        //             var result = i * (j + k);
+        //             document.write(j + k + " X " + i + " = " + result + "\t");
+        //         }
+        //     }
+        // }
+
+
+
+
+    </script>
+
+    <style>
+        .green {
+            font-weight: bold;
+            background-color: green;
+        }
+
+        .red {
+            font-weight: bold;
+            background-color: #f00;
+        }
+
+        .aqua {
+            font-weight: bold;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>

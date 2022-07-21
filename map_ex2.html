@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body > #map {
+        height: 500px;
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    ㅠ
+    <div id="map"></div>
+
+    <script>
+      function initMap() {
+        // 맵 객체를 생성하고 id="map"에 지도 표시
+        let map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: 37.579137, lng: 126.980388 },
+          scrollwheel: true,
+          zoom: 17,
+          //   styles: styleArray,
+        });
+        // 마커 객체 생성
+        let marker1 = new google.maps.Marker({
+          map: map,
+          // 국립현대미술관 37.579537, 126.980388
+          position: { lat: 37.579537, lng: 126.980388 },
+          title: "국립현대 미술관",
+        });
+
+        let marker2 = new google.maps.Marker({
+          map: map,
+          // 아프리카 미술관 37.578014, 126.979913
+          position: { lat: 37.578014, lng: 126.979913 },
+          title: "아프리카 미술관",
+        });
+
+        // let infoWindow = new google.maps.InfoWindow({ map: map });
+
+        // 내 위치
+        // let my_position = { lat: 37.571717, lng: 126.976479 };
+
+        // infoWindow.setPosition(my_position);
+        // infoWindow.setContent("여기가 내 위치입니다!");
+
+        // if (navigator.geolocation) {
+        //   navigator.geolocation.getCurrentPosition(
+        //     function (position) {
+        //       let pos = {
+        //         lat: position.coords.latitude,
+        //         lng: position.coords.longitude,
+        //       };
+
+        //       infoWindow.setPosition(pos);
+        //       infoWindow.setContent("여기 내 위치");
+        //       mpa.setCenter(pos);
+        //     },
+        //     function () {
+        //       handleLocationError(true, infoWindow, map.getCenter());
+        //     }
+        //   );
+        // } else {
+        //   handleLocationError(false, infoWindow, map.getCenter());
+        // }
+      }
+
+      //   function handleLocationError(browserHasGeoLocation, infoWindow, pos) {
+      //     infoWindow.setPosition(pos);
+      //     infoWindow.setContent(browserHasGeoLocation ? "오류: GeoLocation 연결 실패" : "오류: Browser에서 GeoLocation 지원하지 않음");
+      //   }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOcZFhmfuq809yWVChBGf-I51Wjs9QrSE&callback=initMap" async defer></script>
+  </body>
+</html>

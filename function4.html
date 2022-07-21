@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //객체 생성 방식
+        //1) 객체 리터럴, 2) 생성자 함수, 3)object.create()
+        //1)객체 리터럴
+        // let myOnj = {
+        //     name : "홍길동",
+        //     age : 20,
+        //     hello : function() {
+        //         return '이름은 '+ this.name + '이고, 나이는 '+ this.age + '입니다.';
+        //     }
+        // }
+
+        // document.write(myOnj.hello());
+
+
+        // 2) 생성자 함수
+        let myOnj = new Object();
+        myOnj.name = 'Hong';
+        myOb.age = 20;  
+        // myObj['age'] = 20;
+
+        myObj.hello = function() {
+            return '이름은 '+ this.name + '이고, 나이는 '+ this.age + '입니다.';
+        }
+        
+        document.write(myObj.hello());
+
+        // let myObj = function(name,age) {
+        //     this.name = name;
+        //     this.age = age;
+
+        //     this.hello = function() {
+        //         return '이름은 '+ this.name + '이고, 나이는 '+ this.age + '입니다.';
+        //     }
+        // }
+
+        // let my = new myObj('hong', 20)
+             
+        // document.write(my.hello());
+
+
+        // 3) Object.create()
+        // let parent = {a:10, b:20};
+        // let child = Object.create(parent);
+
+        // document.write(child.a);
+
+        let myObj = {
+            name : '홍길동',
+            age : 20,
+             hello : function(){
+                return '이름은 ' + this.name + '이고, 나이는' + this.age + '입니다.';
+             }
+        }
+
+        myObj.name;
+        myObj.age;
+        myObj.hello();
+
+        myObj['name'];
+        myObj['age'];
+        myObj['hello']();
+
+        //객체[key] 방식은 key가 따옴표로 감싸져 있지 않으면 변수로 해석해서 참조한다.(객체.key방식은 불가!)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
